@@ -1,0 +1,6 @@
+2020-08-01 15:50:32,766 [266] ERROR CDFAPI.Repository.LoginRepository - GetUserLoginNew -129 
+ System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at CDFAPI.Repository.LoginRepository.GetUserLoginNew(String userName, String password) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\LoginRepository.cs:line 101 
+ 

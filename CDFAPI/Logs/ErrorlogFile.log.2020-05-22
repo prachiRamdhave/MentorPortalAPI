@@ -1,0 +1,12 @@
+2020-05-22 12:21:14,577 [18] ERROR CDFAPI.Repository.CDFRepository - PutCDFDetailsUpdate -578 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.CDFRepository.PutCDFDetailsUpdate(Int32 id, CDFProfile cdfProfile) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 543 
+ 
+2020-05-22 12:22:21,956 [20] ERROR CDFAPI.Repository.CDFRepository - PutCDFDetailsUpdate -578 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.CDFRepository.PutCDFDetailsUpdate(Int32 id, CDFProfile cdfProfile) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 543 
+ 
+2020-05-22 12:25:34,013 [17] ERROR CDFAPI.Repository.CDFRepository - PutCDFDetailsUpdate -578 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.CDFRepository.PutCDFDetailsUpdate(Int32 id, CDFProfile cdfProfile) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 543 
+ 

@@ -1,0 +1,16 @@
+2020-08-11 14:01:46,047 [13] ERROR CDFAPI.Repository.SchedulingRepository - RequestOTPForSessionComp -0 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.SchedulingRepository.RequestOTPForSessionComp(Int32 studentID, String CDFName) 
+ 
+2020-08-11 14:02:32,899 [13] ERROR CDFAPI.Repository.SchedulingRepository - RequestOTPForSessionComp -0 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.SchedulingRepository.RequestOTPForSessionComp(Int32 studentID, String CDFName) 
+ 
+2020-08-11 14:09:38,671 [13] ERROR CDFAPI.Repository.SchedulingRepository - RequestOTPForSessionComp -0 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.SchedulingRepository.RequestOTPForSessionComp(Int32 studentID, String CDFName) 
+ 
+2020-08-11 18:22:49,970 [7] ERROR CDFAPI.Repository.SchedulingRepository - RequestOTPForSessionComp -199 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.SchedulingRepository.RequestOTPForSessionComp(Int32 studentID, String CDFName) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\SchedulingRepository.cs:line 177 
+ 

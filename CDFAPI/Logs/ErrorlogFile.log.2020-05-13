@@ -1,0 +1,42 @@
+2020-05-13 11:41:32,508 [67] ERROR CDFAPI.Repository.CDFRepository - GetAllCDFDetails -161 
+ System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToBoolean(IFormatProvider provider)
+   at System.Convert.ToBoolean(Object value)
+   at CDFAPI.Repository.CDFRepository.GetAllCDFDetails(Int32 id) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 65 
+ 
+2020-05-13 11:50:14,805 [79] ERROR CDFAPI.Repository.CDFRepository - GetAllCDFDetails -161 
+ System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToBoolean(IFormatProvider provider)
+   at System.Convert.ToBoolean(Object value)
+   at CDFAPI.Repository.CDFRepository.GetAllCDFDetails(Int32 id) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 65 
+ 
+2020-05-13 11:50:28,180 [79] ERROR CDFAPI.Repository.CDFRepository - GetAllCDFDetails -161 
+ System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToBoolean(IFormatProvider provider)
+   at System.Convert.ToBoolean(Object value)
+   at CDFAPI.Repository.CDFRepository.GetAllCDFDetails(Int32 id) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 97 
+ 
+2020-05-13 11:53:18,523 [84] ERROR CDFAPI.Repository.CDFRepository - GetAllCDFDetails -161 
+ System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToBoolean(IFormatProvider provider)
+   at System.Convert.ToBoolean(Object value)
+   at CDFAPI.Repository.CDFRepository.GetAllCDFDetails(Int32 id) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 97 
+ 
+2020-05-13 12:02:22,872 [67] ERROR CDFAPI.Repository.CDFRepository - GetAllCDFDetails -161 
+ System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToBoolean(IFormatProvider provider)
+   at System.Convert.ToBoolean(Object value)
+   at CDFAPI.Repository.CDFRepository.GetAllCDFDetails(Int32 id) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 97 
+ 
+2020-05-13 12:02:38,976 [90] ERROR CDFAPI.Repository.CDFRepository - GetAllCDFDetails -161 
+ System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at CDFAPI.Repository.CDFRepository.GetAllCDFDetails(Int32 id) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 139 
+ 
+2020-05-13 12:06:49,113 [90] ERROR CDFAPI.Repository.CDFRepository - GetAllCDFDetails -161 
+ System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at CDFAPI.Repository.CDFRepository.GetAllCDFDetails(Int32 id) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 139 
+ 

@@ -1,0 +1,35 @@
+2020-06-03 11:02:29,827 [8] ERROR CDFAPI.Controllers.CDFGraphController - DownloadFile -83 
+ System.IO.DirectoryNotFoundException: Could not find a part of the path 'G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\api\CDFGraph\Reports_pdf\'Graph_testdhananjay_dheya.pdf''.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.Web.HttpResponse.WriteFile(String filename, Boolean readIntoMemory)
+   at System.Web.HttpResponse.WriteFile(String filename)
+   at CDFAPI.Controllers.CDFGraphController.DownloadFile(String fname) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Controllers\CDFGraphController.cs:line 78 
+ 
+2020-06-03 12:43:56,641 [32] ERROR CDFAPI.Repository.CDFRepository - UpdateUserProfilePic -266 
+ System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'rahul'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CDFAPI.Repository.CDFRepository.UpdateUserProfilePic(Int32 uId, String ImageName) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 255
+ClientConnectionId:f26e0953-617b-4f89-b4a8-7a603d5a31c4
+Error Number:102,State:1,Class:15 
+ 
+2020-06-03 12:48:10,867 [31] ERROR CDFAPI.Repository.CDFRepository - UpdateUserProfilePic -0 
+ System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'rahul'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CDFAPI.Repository.CDFRepository.UpdateUserProfilePic(Int32 uId, String ImageName)
+ClientConnectionId:f26e0953-617b-4f89-b4a8-7a603d5a31c4
+Error Number:102,State:1,Class:15 
+ 

@@ -1,0 +1,30 @@
+2020-08-24 12:29:54,094 [16] ERROR CDFAPI.Repository.PreRegistrationRepository - PostPreReg1 -91 
+ System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'IX_tblUserDetails'. Cannot insert duplicate key in object 'dbo.tblUserDetails'. The duplicate key value is (3689).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CDFAPI.Repository.PreRegistrationRepository.PostPreReg1(PreRegistration1 pre) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\PreRegistrationRepository.cs:line 68
+ClientConnectionId:01275706-0c80-4ae8-878a-f06b58536c69
+Error Number:2627,State:1,Class:14 
+ 
+2020-08-24 12:30:47,643 [24] ERROR CDFAPI.Repository.DataContex - sendemail -112 
+ System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 SMTP; Client was not authenticated to send anonymous mail during MAIL FROM [BM1PR0101CA0039.INDPRD01.PROD.OUTLOOK.COM]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at CDFAPI.Repository.DataContex.sendemail(String to, String cc, String bcc, String subject, String body) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\DataContex.cs:line 106 
+ 
+2020-08-24 12:36:46,870 [44] ERROR CDFAPI.Repository.DataContex - sendemail -112 
+ System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 SMTP; Client was not authenticated to send anonymous mail during MAIL FROM [BMXPR01CA0042.INDPRD01.PROD.OUTLOOK.COM]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at CDFAPI.Repository.DataContex.sendemail(String to, String cc, String bcc, String subject, String body) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\DataContex.cs:line 106 
+ 

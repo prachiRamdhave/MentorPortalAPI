@@ -1,0 +1,54 @@
+2020-05-30 12:49:36,740 [8] ERROR CDFAPI.Repository.SchedulingRepository - GetSessionSchedule -84 
+ System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at CDFAPI.Repository.SchedulingRepository.GetSessionSchedule(Int32 CDF_ID) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\SchedulingRepository.cs:line 39 
+ 
+2020-05-30 12:50:42,509 [7] ERROR CDFAPI.Repository.SchedulingRepository - GetSessionSchedule -84 
+ System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at CDFAPI.Repository.SchedulingRepository.GetSessionSchedule(Int32 CDF_ID) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\SchedulingRepository.cs:line 39 
+ 
+2020-05-30 12:51:24,281 [7] ERROR CDFAPI.Repository.SchedulingRepository - GetSessionSchedule -84 
+ System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at CDFAPI.Repository.SchedulingRepository.GetSessionSchedule(Int32 CDF_ID) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\SchedulingRepository.cs:line 39 
+ 
+2020-05-30 13:47:04,137 [25] ERROR CDFAPI.Repository.CDFRepository - UpdateImg -0 
+ System.Web.HttpException (0x80004005): 'http:/www.dheya.com/cdf-dashboard/doc/demoshruti.kabra@dheya.com_formal_2385' is not a valid virtual path.
+   at System.Web.Util.UrlPath.CheckValidVirtualPath(String path)
+   at System.Web.Util.UrlPath.Combine(String appPath, String basepath, String relative)
+   at System.Web.VirtualPath.Combine(VirtualPath relativePath)
+   at System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   at System.Web.HttpServerUtility.MapPath(String path)
+   at CDFAPI.Repository.CDFRepository.UpdateImg(String email, Int32 uId, String ImageName) 
+ 
+2020-05-30 13:50:18,709 [32] ERROR CDFAPI.Repository.CDFRepository - UpdateImg -0 
+ System.Web.HttpException (0x80004005): 'http:/www.dheya.com/cdf-dashboard/doc/demo/shruti.kabra@dheya.com_formal_2385' is not a valid virtual path.
+   at System.Web.Util.UrlPath.CheckValidVirtualPath(String path)
+   at System.Web.Util.UrlPath.Combine(String appPath, String basepath, String relative)
+   at System.Web.VirtualPath.Combine(VirtualPath relativePath)
+   at System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   at System.Web.HttpServerUtility.MapPath(String path)
+   at CDFAPI.Repository.CDFRepository.UpdateImg(String email, Int32 uId, String ImageName) 
+ 
+2020-05-30 14:00:58,966 [11] ERROR CDFAPI.Repository.CDFRepository - UpdateImg -305 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.CDFRepository.UpdateImg(String email, Int32 uId, String ImageName) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 288 
+ 
+2020-05-30 14:08:03,600 [15] ERROR CDFAPI.Repository.CDFRepository - UpdateImg -0 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.CDFRepository.UpdateImg(String email, Int32 uId, String ImageName) 
+ 
+2020-05-30 14:11:04,536 [16] ERROR CDFAPI.Repository.CDFRepository - UpdateImg -0 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.CDFRepository.UpdateImg(String email, Int32 uId, String ImageName) 
+ 

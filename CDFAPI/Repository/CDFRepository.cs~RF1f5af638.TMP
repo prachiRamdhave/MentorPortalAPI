@@ -1,0 +1,659 @@
+﻿using CDFAPI.Models;
+using log4net;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+
+namespace CDFAPI.Repository
+{
+    public class CDFRepository
+    {
+        string connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
+        private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        // Get all CDF details
+        public CDFProfile GetAllCDFDetails(int id)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("spCDFAllDetails", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id", id);
+                    con.Open();
+
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.HasRows)
+                    {
+                        sdr.Read();
+                            CDFProfile cdf = new CDFProfile();
+                            cdf.uId = Convert.ToInt32(sdr["uId"]);
+                            cdf.userTypeId = Convert.ToInt32(sdr["userTypeid"]);
+                            cdf.fname = sdr["fname"].ToString();
+                            cdf.lname = sdr["lname"].ToString();
+                            cdf.gender = sdr["gender"].ToString();
+                            cdf.dob = Convert.ToDateTime(sdr["dob"]);
+                            cdf.contactNo = sdr["contactNo"].ToString();
+                            cdf.email = sdr["email"].ToString();
+                            cdf.password = sdr["password"].ToString();
+                            cdf.city = sdr["name"].ToString();
+                            cdf.pincode = sdr["pincode"].ToString();
+                            cdf.address = sdr["address"].ToString();
+                            cdf.cdfApproved = sdr["cdfApproved"].ToString();
+                            cdf.cdfLevel = Convert.ToInt32(sdr["cdfLevel"]);
+                            cdf.cdfrating = Convert.ToInt32(sdr["cdfrating"]);
+                            cdf.regDateTime = Convert.ToDateTime(sdr["regDateTime"]);
+                            cdf.standard = sdr["standard"].ToString();
+                            cdf.schoolName = sdr["schoolName"].ToString();
+                            cdf.division = sdr["division"].ToString();
+                            cdf.occupation = sdr["occupation"].ToString();
+                            cdf.status = sdr["status"].ToString();
+                            cdf.userStatus = sdr["userStatus"].ToString();
+                            cdf.userSource = sdr["userSource"].ToString();
+                            cdf.profileDisplayApproval = Convert.ToBoolean(sdr["profileDisplayApproval"]);
+                            cdf.cdfId = sdr["cdfId"].ToString();
+                            cdf.profileUpdateApproval = Convert.ToBoolean(sdr["profileUpdateApproval"]);
+                            if (cdf.dateModified != null)
+                            {
+                                cdf.dateModified = Convert.ToDateTime(sdr["dateModified"]);
+                            }
+                            cdf.modifiedBy = sdr["modifiedBy"].ToString();
+                            cdf.qualification = sdr["qualification"].ToString();
+                            cdf.whyThisOpp = sdr["whyThisOpp"].ToString();
+                            cdf.working = sdr["working"].ToString();
+                            cdf.designation = sdr["designation"].ToString();
+                            cdf.oraganisation = sdr["oraganisation"].ToString();
+                            cdf.maritalstatus = sdr["maritalstatus"].ToString();
+                            cdf.linkedin = sdr["linkedin"].ToString();
+                            cdf.facebook = sdr["facebook"].ToString();
+                            cdf.twitter = sdr["twitter"].ToString();
+                            cdf.aboutSelf = sdr["aboutSelf"].ToString();
+                            cdf.resume = sdr["resume"].ToString();
+                            cdf.formalImg = sdr["formalImg"].ToString();
+                            cdf.casualImg = sdr["casualImg"].ToString();
+                            cdf.spouseName = sdr["spouseName"].ToString();
+                            cdf.spouseAge = sdr["spouseAge"].ToString();
+                            cdf.childrenAge = sdr["childrenAge"].ToString();
+                            cdf.feesPay = sdr["feesPay"].ToString();
+                            cdf.ndaStatus = sdr["ndaStatus"].ToString();
+                            cdf.preStatus = sdr["preStatus"].ToString();
+                            cdf.postStatus = sdr["postStatus"].ToString();
+                            cdf.profilePicDisplay = sdr["profilePicDisplay"].ToString();
+                            cdf.authCode = sdr["authCode"].ToString();
+                            //if (cdf.idcard != null)
+                            //{
+                                cdf.idcard = Convert.ToBoolean(sdr["idcard"]);
+                            //}
+                            if (cdf.certificate != null)
+                            {
+                                cdf.certificate = Convert.ToBoolean(sdr["certificate"]);
+                            }
+                            if (cdf.visitingCard != null)
+                            {
+                                cdf.visitingCard = Convert.ToBoolean(sdr["visitingCard"]);
+                            }
+                            if (cdf.ndaCopy != null)
+                            {
+                                cdf.ndaCopy = Convert.ToBoolean(sdr["ndaCopy"]);
+                            }
+                            if (cdf.batchId != null)
+                            {
+                                cdf.batchId = Convert.ToInt32(sdr["batchId"]);
+                            }
+                            cdf.comments = sdr["comments"].ToString();
+                            cdf.refundStatus = sdr["refundStatus"].ToString();
+                            if (cdf.refundAmount != null)
+                            {
+                                cdf.refundAmount = Convert.ToInt32(sdr["refundAmount"]);
+                            }
+                            if (cdf.childTestStatus != null)
+                            {
+                                cdf.childTestStatus = Convert.ToBoolean(sdr["childTestStatus"]);
+                            }
+                            if (cdf.childSessionStatus != null)
+                            {
+                                cdf.childSessionStatus = Convert.ToBoolean(sdr["childSessionStatus"]);
+                            }
+                            if (cdf.spouseTestStatus != null)
+                            {
+                                cdf.spouseTestStatus = Convert.ToBoolean(sdr["spouseTestStatus"]);
+                            }
+                            if (cdf.shadowSession != null)
+                            {
+                                cdf.shadowSession = Convert.ToInt32(sdr["shadowSession"]);
+                            }
+                            cdf.accountDetails = sdr["accountDetails"].ToString();
+                            
+                            cdf.yearsOfExperience = Convert.ToInt32(sdr["yearsOfExperience"]);
+                            
+                            cdf.fieldOfWork = sdr["fieldOfWork"].ToString();
+                            cdf.modeOfWork = sdr["modeOfWork"].ToString();
+                            cdf.industrySector = sdr["industrySector"].ToString();
+                            cdf.remark = sdr["remark"].ToString();
+                            cdf.classification = sdr["classification"].ToString();
+
+                            cdf.accountHolderName = sdr["accountHolderName"].ToString();
+                            cdf.accountNumber = sdr["accountNumber"].ToString();
+                            cdf.bankName = sdr["bankName"].ToString();
+                            cdf.branchName = sdr["branchName"].ToString();
+                            cdf.ifscNo = sdr["ifscNo"].ToString();
+
+                        return cdf;
+                    }
+                    else
+                        return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return null;
+            }
+        }
+
+        // Get all CDF Education List
+        public List<CDFEducation> GetCDFEducation(int id)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string cdfEduQuery = "SELECT * FROM tblEducation where uId = " + id + "";
+                    SqlCommand cmd = new SqlCommand(cdfEduQuery, con);
+                    con.Open();
+
+                    List<CDFEducation> le = new List<CDFEducation>();
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            CDFEducation edu = new CDFEducation();
+                            edu.eduId = Convert.ToInt32(dr["id"]);
+                            edu.college = dr["cdf_college"].ToString();
+                            edu.degree = dr["cdf_degree"].ToString();
+                            edu.description = dr["cdf_description"].ToString();
+                            edu.grade = dr["cdf_grade"].ToString();
+
+                            le.Add(edu);
+                        }
+                        return le;
+                    }
+                    else
+                        return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return null;
+            }
+        }
+
+        // Get selected education details
+        public CDFEducation GetCDFEducationMoreDetails(int id, int eduId)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {                    
+                    SqlCommand cmd = new SqlCommand("spCDFEducationMoreDetails", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uId", id);
+                    cmd.Parameters.AddWithValue("@eduId", eduId);
+                    con.Open();                   
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+                        
+                            CDFEducation edu = new CDFEducation();
+                            edu.eduId = Convert.ToInt32(dr["id"]);
+                            edu.college = dr["cdf_college"].ToString();
+                            edu.degree = dr["cdf_degree"].ToString();
+                            edu.description = dr["cdf_description"].ToString();
+                            edu.grade = dr["cdf_grade"].ToString();
+                                               
+                        return edu;
+                    }
+                    else
+                        return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return null;
+            }
+        }
+
+        // Get all CDF Experience List
+        public List<CDFExperience> GetCDFExperience(int id)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string cdfExpQuery = "SELECT * FROM tblExperience where uId = " + id + "";
+                    SqlCommand cmd = new SqlCommand(cdfExpQuery, con);
+                    con.Open();
+
+                    List<CDFExperience> lx = new List<CDFExperience>();
+
+                    SqlDataReader dr2 = cmd.ExecuteReader();
+                    if (dr2.HasRows)
+                    {
+                        while (dr2.Read())
+                        {
+                            CDFExperience exp = new CDFExperience();
+                            exp.expId = Convert.ToInt32(dr2["id"]);
+                            exp.company = dr2["cdf_company"].ToString();
+                            exp.position = dr2["cdf_position"].ToString();
+                            exp.job_start_date = Convert.ToDateTime(dr2["cdf_job_start_date"]);
+                            exp.job_end_date = Convert.ToDateTime(dr2["cdf_job_end_date"]);
+                            exp.location = dr2["cdf_location"].ToString();
+                            exp.position_discription = dr2["cdf_position_discription"].ToString();
+
+                            lx.Add(exp);
+                        }
+                        return lx;
+                    }
+                    else
+                        return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return null;
+            }
+        }
+
+        // Get selected experience details
+        public CDFExperience GetCDFExperienceMoreDetails(int id, int expId)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("spCDFExperienceMoreDetails", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uId", id);
+                    cmd.Parameters.AddWithValue("@expId", expId);
+                    con.Open();
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+
+                        CDFExperience exp = new CDFExperience();
+                        exp.uId = Convert.ToInt32(dr["uId"]);
+                        exp.expId = Convert.ToInt32(dr["id"]);
+                        exp.company = dr["cdf_company"].ToString();
+                        exp.position = dr["cdf_position"].ToString();
+                        exp.job_start_date = Convert.ToDateTime(dr["cdf_job_start_date"]);
+                        exp.job_end_date = Convert.ToDateTime(dr["cdf_job_end_date"]);
+                        exp.location = dr["cdf_location"].ToString();
+                        exp.position_discription = dr["cdf_position_discription"].ToString();
+
+                        return exp;
+                    }
+                    else
+                        return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return null;
+            }
+        }
+
+        // CDF Details update
+        public bool PutCDFDetailsUpdate(int id, CDFProfile cdfProfile)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+
+                    SqlCommand cmd = new SqlCommand("spCDFUpdateDetails", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uId", id);
+                    cmd.Parameters.AddWithValue("@fname", cdfProfile.fname);
+                    cmd.Parameters.AddWithValue("@lname", cdfProfile.lname);
+                    cmd.Parameters.AddWithValue("@contactNo", cdfProfile.contactNo);
+                    cmd.Parameters.AddWithValue("@cityid", cdfProfile.cityid);
+                    cmd.Parameters.AddWithValue("@gender", cdfProfile.gender);
+                    cmd.Parameters.AddWithValue("@dob", cdfProfile.dob);
+                   // cmd.Parameters.AddWithValue("@profileUpdateApproval", cdfProfile.profileUpdateApproval);
+                    //cmd.Parameters.AddWithValue("@profileDisplayApproval", cdfProfile.profileDisplayApproval);
+                    //cmd.Parameters.AddWithValue("@dateModified", cdfProfile.dateModified);
+                    cmd.Parameters.AddWithValue("@pincode", cdfProfile.pincode);
+                    cmd.Parameters.AddWithValue("@qualification", cdfProfile.qualification);
+                    cmd.Parameters.AddWithValue("@designation", cdfProfile.designation);
+                    cmd.Parameters.AddWithValue("@yearsOfExperience", cdfProfile.yearsOfExperience);
+                   //cmd.Parameters.AddWithValue("@aboutSelf", cdfProfile.aboutSelf);
+                    //cmd.Parameters.AddWithValue("@fieldOfWork", cdfProfile.fieldOfWork);
+                    //cmd.Parameters.AddWithValue("@modeOfWork", cdfProfile.modeOfWork);
+                    //cmd.Parameters.AddWithValue("@industrySector", cdfProfile.industrySector);
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return false;
+            }
+        }
+
+        // CDF Bank Details update
+        public bool PutCDFBankDetailUpdate(int id, CDFProfile cdfBank)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("spCDFBankDetailUpdate", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uId", id);
+                    cmd.Parameters.AddWithValue("@accountHolderName", cdfBank.accountHolderName);
+                    cmd.Parameters.AddWithValue("@accountNumber", cdfBank.accountNumber);
+                    cmd.Parameters.AddWithValue("@bankName", cdfBank.bankName);
+                    cmd.Parameters.AddWithValue("@branchName", cdfBank.branchName);
+                    cmd.Parameters.AddWithValue("@ifscNo", cdfBank.ifscNo);
+
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if(i > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return false;
+            }
+        }
+
+        // CDF Education Add
+        public string PostCDFEducationAdd(CDFEducation CDFEducation)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("spCDFAddEducation", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    CDFEducation cdfEdu = new CDFEducation();
+                    cmd.Parameters.AddWithValue("@uId", CDFEducation.uId);
+                    cmd.Parameters.AddWithValue("@college", CDFEducation.college);
+                    cmd.Parameters.AddWithValue("@degree", CDFEducation.degree);
+                    cmd.Parameters.AddWithValue("@description", CDFEducation.description);
+                    cmd.Parameters.AddWithValue("@grade", CDFEducation.grade);
+
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if(i > 0)
+                    {
+                        return "Record has been successfully added";
+                    }
+                    else
+                    {
+                        return "No record added";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return "Something went wrong! Error:" + ex.Message;
+            }
+            
+        }
+
+        // CDF Education Update
+        public string PutCDFEducationUpdate(int id, int eduId, CDFEducation cdfeducation)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("spCDFUpdateEducation", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uId", id);
+                    cmd.Parameters.AddWithValue("@eduId", eduId);
+                    cmd.Parameters.AddWithValue("@college", cdfeducation.college);
+                    cmd.Parameters.AddWithValue("@degree", cdfeducation.degree);
+                    cmd.Parameters.AddWithValue("@description", cdfeducation.description);
+                    cmd.Parameters.AddWithValue("@grade", cdfeducation.grade);
+
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if(i > 0)
+                    {
+                        return "Record has been successfully updated";
+                    }
+                    else
+                    {
+                        return "No record updated";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return "Something went wrong! Error:" + ex.Message;
+            }
+        }
+
+        // CDF Education Delete
+        public string DeleteCDFEducation(int id, int eduId, CDFEducation CDFEducationDel)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("spCDFDeleteEducation", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uId", id);
+                    cmd.Parameters.AddWithValue("@eduId", eduId);
+
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        return "Record has been successfully deleted";
+                    }
+                    else
+                    {
+                        return "No record Deleted";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return "Something went wrong! Error:" + ex.Message;
+            }
+        }
+
+        // CDF Experience Add
+        public string PostCDFExperienceAdd(CDFExperience CDFExperience)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("spCDFAddExperience", con);
+                    cmd.CommandType = CommandType.StoredProcedure;                    
+                    cmd.Parameters.AddWithValue("@uId", CDFExperience.uId);
+                    cmd.Parameters.AddWithValue("@company", CDFExperience.company);
+                    cmd.Parameters.AddWithValue("@position", CDFExperience.position);
+                    cmd.Parameters.AddWithValue("@job_start_date", CDFExperience.job_start_date);
+                    cmd.Parameters.AddWithValue("@job_end_date", CDFExperience.job_end_date);
+                    cmd.Parameters.AddWithValue("@location", CDFExperience.location);
+                    cmd.Parameters.AddWithValue("@position_discription", CDFExperience.position_discription);
+
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if(i > 0)
+                    {
+                        return "Record has been successfully added";
+                    }
+                    else
+                    {
+                        return "No record added";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return "Something went wrong! Error:" + ex.Message;
+            }
+        }
+
+        // CDF Experience Update
+        public string PutCDFExperienceUpdate(int id, int expId, CDFExperience CDFExperience)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("spCDFUpdateExperience", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uId", id);
+                    cmd.Parameters.AddWithValue("@expId", expId);
+                    cmd.Parameters.AddWithValue("@company", CDFExperience.company);
+                    cmd.Parameters.AddWithValue("@position", CDFExperience.position);
+                    cmd.Parameters.AddWithValue("@job_start_date", CDFExperience.job_start_date);
+                    cmd.Parameters.AddWithValue("@job_end_date", CDFExperience.job_end_date);
+                    cmd.Parameters.AddWithValue("@location", CDFExperience.location);
+                    cmd.Parameters.AddWithValue("@position_discription", CDFExperience.position_discription);
+
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        return "Record has been successfully updated";
+                    }
+                    else
+                    {
+                        return "No record updated";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return "Something went wrong! Error:" + ex.Message;
+            }
+        }
+
+        // CDF Experience Delete
+        public string DeleteCDFExperience(int id, int expId)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("spCDFDeleteExperience", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uId", id);
+                    cmd.Parameters.AddWithValue("@expId", expId);
+
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        return "Record has been successfully deleted";
+                    }
+                    else
+                    {
+                        return "No record deleted";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return "Something went wrong! Error:" + ex.Message;
+            }
+        }
+
+        public string PutProfileImageupdate(int uid, string email, string imagePath, ProfilePicUpdate ProfilePicUpdate)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    //if (imagePath.PostedFile.ContentLength < 2097152) // 2 MB 1024*KB of file size
+                    //{
+                        //formal_Image Upload code with rename in user emailid+_formal_+id
+                        string img = file_image.FileName;
+                        img = img.Substring(img.LastIndexOf('.'));
+                        string imgfile = email + "_formal_" + Session["uid"].ToString() + img;
+                        file_image.PostedFile.SaveAs(Server.MapPath(ConfigurationManager.AppSettings["imageFormalPath"].ToString() + imgfile));
+
+                        // update data in table tblUserDetails for CDF-PostRegistration
+                        string str = "update tblUserDetails set formalImg = '" + imgfile.ToString() + "' where uId = '" + Session["uid"].ToString() + "'";
+                        int i = dbContext.ExecNonQuery(str);
+                        div_msg.Visible = true;
+                        div_msg.Attributes["class"] = "alert alert-success";
+                        div_msg.InnerText = "Successfully uploaded your image";
+                    //}
+                    //else
+                    //{
+                    //    div_msg.Visible = true;
+                    //    div_msg.Attributes["class"] = "alert alert-danger";
+                    //    div_msg.InnerText = "Selected image file size is more than 1 MB. So, please upload it again with less than 1 MB size.";
+                    //}
+                    SqlCommand cmd = new SqlCommand("spCDFUpdateExperience", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uId", uid);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@company", CDFExperience.company);
+
+
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        return "Successfully uploaded your image";
+                    }
+                    else
+                    {
+                        return "No record updated";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("" + ex);
+                return "Something went wrong! Error:" + ex.Message;
+            }
+        }
+    }
+}

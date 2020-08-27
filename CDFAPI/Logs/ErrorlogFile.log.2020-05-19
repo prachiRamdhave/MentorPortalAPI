@@ -1,0 +1,44 @@
+2020-05-19 12:34:30,252 [14] ERROR CDFAPI.Repository.CDFRepository - PutCDFBankDetailUpdate -610 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.CDFRepository.PutCDFBankDetailUpdate(Int32 id, BankDtl cdfBank) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 590 
+ 
+2020-05-19 12:35:44,622 [14] ERROR CDFAPI.Repository.CDFRepository - PutCDFBankDetailUpdate -610 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.CDFRepository.PutCDFBankDetailUpdate(Int32 id, BankDtl cdfBank) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 590 
+ 
+2020-05-19 12:38:01,805 [37] ERROR CDFAPI.Repository.CDFRepository - PutCDFBankDetailUpdate -610 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.CDFRepository.PutCDFBankDetailUpdate(Int32 id, BankDtl cdfBank) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 590 
+ 
+2020-05-19 12:40:01,935 [39] ERROR CDFAPI.Repository.CDFRepository - PutCDFBankDetailUpdate -610 
+ System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_tblUserBankDetails_tblUserMaster". The conflict occurred in database "MobileAppDB1", table "dbo.tblUserMaster", column 'uId'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CDFAPI.Repository.CDFRepository.PutCDFBankDetailUpdate(Int32 id, BankDtl cdfBank) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 597
+ClientConnectionId:1e66ebce-d379-44f0-8ac8-511ce3ba4dee
+Error Number:547,State:0,Class:16 
+ 
+2020-05-19 12:42:23,740 [13] ERROR CDFAPI.Repository.CDFRepository - PutCDFBankDetailUpdate -610 
+ System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_tblUserBankDetails_tblUserMaster". The conflict occurred in database "MobileAppDB1", table "dbo.tblUserMaster", column 'uId'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CDFAPI.Repository.CDFRepository.PutCDFBankDetailUpdate(Int32 id, BankDtl cdfBank) in E:\prachi\CDFDashboard_2020\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFRepository.cs:line 597
+ClientConnectionId:1e66ebce-d379-44f0-8ac8-511ce3ba4dee
+Error Number:547,State:0,Class:16 
+ 

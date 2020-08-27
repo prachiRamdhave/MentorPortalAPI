@@ -1,0 +1,16 @@
+2020-08-05 12:33:10,736 [6] ERROR CDFAPI.Repository.CDFGraphRepository - GetStudentGraph -290 
+ System.InvalidOperationException: ExecuteNonQuery: Connection property has not been initialized.
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CDFAPI.Repository.CDFGraphRepository.GetStudentGraph(Int32 cId) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\CDFGraphRepository.cs:line 283 
+ 
+2020-08-05 12:40:26,223 [29] ERROR CDFAPI.Repository.CDFGraphRepository - GetStudentGraph -0 
+ System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CDFAPI.Repository.CDFGraphRepository.GetStudentGraph(Int32 cId) 
+ 

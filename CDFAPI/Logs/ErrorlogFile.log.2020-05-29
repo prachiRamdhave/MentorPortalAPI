@@ -1,0 +1,40 @@
+2020-05-29 12:22:02,957 [20] ERROR CDFAPI.Repository.SchedulingRepository - GetSessionSchedule -84 
+ System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at CDFAPI.Repository.SchedulingRepository.GetSessionSchedule(Int32 CDF_ID) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\SchedulingRepository.cs:line 39 
+ 
+2020-05-29 12:28:13,618 [38] ERROR CDFAPI.Repository.SchedulingRepository - GetSessionSchedule -84 
+ System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at CDFAPI.Repository.SchedulingRepository.GetSessionSchedule(Int32 CDF_ID) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\SchedulingRepository.cs:line 39 
+ 
+2020-05-29 12:33:23,298 [33] ERROR CDFAPI.Repository.SchedulingRepository - GetSessionSchedule -84 
+ System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at CDFAPI.Repository.SchedulingRepository.GetSessionSchedule(Int32 CDF_ID) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\SchedulingRepository.cs:line 39 
+ 
+2020-05-29 13:36:22,043 [9] ERROR CDFAPI.Repository.SchedulingRepository - GetSessionSchedule -84 
+ System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at CDFAPI.Repository.SchedulingRepository.GetSessionSchedule(Int32 CDF_ID) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\SchedulingRepository.cs:line 39 
+ 
+2020-05-29 13:38:20,595 [12] ERROR CDFAPI.Repository.SchedulingRepository - GetSessionSchedule -84 
+ System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at CDFAPI.Repository.SchedulingRepository.GetSessionSchedule(Int32 CDF_ID) in G:\Dheya_Project\API\CDF-Dashboard-API-master\CDFAPI\Repository\SchedulingRepository.cs:line 39 
+ 

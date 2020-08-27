@@ -1,0 +1,28 @@
+2020-08-21 16:59:52,268 [6] ERROR CDFAPI.Repository.PreRegistrationRepository - PostPreReg2 -229 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.PreRegistrationRepository.PostPreReg2(PreRegistration2 pre2) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\PreRegistrationRepository.cs:line 170 
+ 
+2020-08-21 17:00:44,771 [5] ERROR CDFAPI.Repository.PreRegistrationRepository - PostPreReg2 -229 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.PreRegistrationRepository.PostPreReg2(PreRegistration2 pre2) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\PreRegistrationRepository.cs:line 170 
+ 
+2020-08-21 17:02:07,089 [6] ERROR CDFAPI.Repository.PreRegistrationRepository - PostPreReg2 -229 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.PreRegistrationRepository.PostPreReg2(PreRegistration2 pre2) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\PreRegistrationRepository.cs:line 170 
+ 
+2020-08-21 17:02:45,671 [25] ERROR CDFAPI.Repository.PreRegistrationRepository - PostPreReg2 -229 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.PreRegistrationRepository.PostPreReg2(PreRegistration2 pre2) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\PreRegistrationRepository.cs:line 170 
+ 
+2020-08-21 17:21:22,302 [6] ERROR CDFAPI.Repository.PreRegistrationRepository - PostPreReg2 -229 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.PreRegistrationRepository.PostPreReg2(PreRegistration2 pre2) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\PreRegistrationRepository.cs:line 170 
+ 
+2020-08-21 17:25:57,194 [48] ERROR CDFAPI.Repository.PreRegistrationRepository - PostPreReg2 -229 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.PreRegistrationRepository.PostPreReg2(PreRegistration2 pre2) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\PreRegistrationRepository.cs:line 170 
+ 
+2020-08-21 17:28:04,171 [6] ERROR CDFAPI.Repository.PreRegistrationRepository - PostPreReg2 -229 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CDFAPI.Repository.PreRegistrationRepository.PostPreReg2(PreRegistration2 pre2) in E:\PrachiNew\FinalP\CDF-Dashboard-API-master\CDFAPI\Repository\PreRegistrationRepository.cs:line 170 
+ 
